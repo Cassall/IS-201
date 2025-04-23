@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Joke Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #f9f9f9;
+    }
+    .joke-box {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    button {
+      padding: 10px 20px;
+      margin-top: 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="joke-box">
+    <h1>😂 Joke Generator 😂</h1>
+    <p id="joke">Click the button to get a joke!</p>
+    <button onclick="generateJoke()">Tell Me a Joke</button>
+  </div>
+  <br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br> <br><br>
+  <nav>
+    <a href="scratch.html">Scratch</a>
+    <a href="index.html">Professional</a>
+</nav>
+
+  <script>
+    const jokes = [
+      "Why don't scientists trust atoms? Because they make up everything!",
+      "I'm reading a book on anti-gravity. It's impossible to put down!",
+      "Why did the scarecrow win an award? Because he was outstanding in his field!",
+      "I told my computer I needed a break, and it said 'No problem, I'll go to sleep.'",
+      "Why don’t skeletons fight each other? They don’t have the guts."
+    ];
+
+    function generateJoke() {
+      const randomIndex = Math.floor(Math.random() * jokes.length);
+      document.getElementById("joke").textContent = jokes[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
